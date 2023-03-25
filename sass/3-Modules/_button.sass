@@ -1,0 +1,31 @@
+@use '../1-Base/variables'
+
+
+%btn-style
+    padding: 1.2em 3em
+    font-weight: 700
+    background: variables.$primary-color
+    color: variables.$light-color
+    cursor: pointer
+    border-radius: 2em
+
+    &:hover
+        transition: 0.2s all
+        border: 1px solid variables.$primary-color
+        color: variables.$primary-color
+        background: variables.$light-color
+
+%btn-style-input
+    padding: 1em 2em
+    background: variables.$primary-color
+    color: #fff
+    font-weight: 700
+    border-top-right-radius: 20px
+    border-bottom-right-radius: 20px
+    
+
+.product-button
+    @extend %btn-style
+
+.btn-input
+    @extend %btn-style-input

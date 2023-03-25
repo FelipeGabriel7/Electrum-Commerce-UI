@@ -1,0 +1,28 @@
+@use '../1-Base/variables'
+@use 'mixins-layouts'
+
+.newslestter-container
+    height: 30vh
+    display: flex
+    gap: 0.5em
+    flex-direction: column
+    align-items: center
+    justify-content: center
+
+    &-title
+        font-weight: bold
+        font-size: 2em
+
+    
+    .social-media
+        margin-top: 2em
+        display: flex
+        color: variables.$primary-color
+        gap: 2em
+        font-size: 1.2em
+        justify-content: center
+        cursor: pointer
+
+        i:hover
+            transition: 0.3s all ease-in
+            color: variables.$bg-color

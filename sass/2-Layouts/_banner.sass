@@ -1,0 +1,67 @@
+@use '../1-Base/variables'
+@use 'mixins-layouts'
+@use '../1-Base/medias-base'
+
+.cards-header
+    margin-top: 5em
+    display: flex
+    gap: 3em
+    text-align: start
+    align-items: flex-start
+    justify-content: center
+
+    @include medias-base.tabletResponsive
+        flex-wrap: wrap
+
+    .card-1
+        background-image: url('/images/banner-1.jpg')
+        @include mixins-layouts.cardImage
+
+        @include medias-base.tabletResponsive
+            width: 80%
+
+        &-header-text
+            @include mixins-layouts.banners
+
+            @include medias-base.tabletResponsive
+                inset: 0
+
+            &:hover
+                transition: 0.5s all ease-in-out
+                background: variables.$primary-color
+
+    .card-2
+        background-image: url('/images/banner-2.jpg')
+        @include mixins-layouts.cardImage
+
+        @include medias-base.tabletResponsive
+            width: 80%
+
+        &-header-text
+            @include mixins-layouts.banners
+
+            
+            @include medias-base.tabletResponsive
+                inset: 0
+
+            &:hover
+                transition: 0.5s all ease-in-out
+                background: variables.$primary-color
+
+
+    .card-3
+        background-image: url('/images/banner-3.jpg')
+        @include mixins-layouts.cardImage
+
+        @include medias-base.tabletResponsive
+            width: 80%
+
+        &-header-text
+            @include mixins-layouts.banners
+
+            @include medias-base.tabletResponsive
+                inset: 0
+
+            &:hover
+                transition: 0.5s all ease-in-out
+                background: variables.$primary-color

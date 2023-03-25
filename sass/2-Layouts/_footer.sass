@@ -1,0 +1,49 @@
+@use '../1-Base/variables'
+@use 'mixins-layouts'
+@use '../1-Base/medias-base'
+
+
+.footer-container
+    background: variables.$bg-color
+    color: variables.$light-color
+    padding: 4em
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    gap: 3em
+
+       
+    .footer
+        display: flex
+        gap: 5em
+
+        
+        @include medias-base.tabletResponsive
+            flex-wrap: wrap
+            justify-content: center
+
+        @include medias-base.mobileResponsive
+            gap: 2em
+            flex-direction: column
+
+    .info , .menu , .about , .categoria
+        display: flex
+        flex-direction: column
+        gap: 1.5em
+
+    h3
+        text-transform: uppercase
+        font-weight: 800
+
+    p , .copy
+        color: variables.$gray-text-color
+        cursor: pointer
+
+        
+        &:hover
+            color: variables.$light-color
+
+    i
+        color: variables.$primary-color
+        margin-right: 10px

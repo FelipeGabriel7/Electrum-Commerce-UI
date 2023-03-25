@@ -1,0 +1,76 @@
+@use '../1-Base/variables'
+@use 'mixins-layouts'
+@use '../1-Base/medias-base'
+
+.new-products
+    margin: 4em auto
+    display: flex
+    flex-direction: column
+
+    &-title
+        margin-left: 40px
+        font-weight: bold
+        font-size: 2em
+
+
+    &-container
+        margin: 3em
+        display: grid
+        grid-template-columns: repeat(4, 1fr)
+        gap: 2em
+
+        @include medias-base.tabletResponsive
+            grid-template-columns: repeat(2, 1fr)
+
+        @include medias-base.mobileResponsive
+            grid-template-columns: repeat(1, 1fr)
+
+        .product
+            @include mixins-layouts.product
+
+            &:hover
+                transition: 0.1s all ease-in
+                border: 2px solid variables.$primary-color
+
+
+            &-tag
+                position: absolute
+                top: 10%
+                align-self: end
+                padding: 0.5em
+                background: variables.$primary-color
+                color: variables.$light-color
+
+            &-tag-hot
+                position: absolute
+                top: 10%
+                align-self: end
+                padding: 0.5em
+                color: variables.$primary-color
+                border: 1px solid variables.$primary-color
+
+            &-image
+                width: 100%
+
+            
+            &-category
+                margin: 1em auto
+                color: variables.$bg-color
+
+            &-name
+                font-size: 1.2
+                text-transform: uppercase
+                color: variables.$bg-color
+                font-weight: bold
+
+            &-price
+                margin: 0.5em auto
+                font-size: 1.5em
+                font-weight: bold
+                color: variables.$primary-color
+
+            &-star 
+                color: variables.$primary-color
+                margin: 0.5em auto
+
+      

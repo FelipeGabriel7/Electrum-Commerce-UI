@@ -1,0 +1,59 @@
+@use '../1-Base/variables'
+@use 'mixins-layouts'
+@use '../1-Base/medias-base'
+
+.section-promotion
+    background-image: url('/images/deal_headset.png')
+    @include mixins-layouts.promotionSection
+
+    @include medias-base.tabletResponsive
+        background-size: 40%
+        
+
+    &-counter
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 2em
+
+        p
+            font-size: 1.5em
+        
+        .counter-item
+            display: flex
+            width: 120px
+            height: 120px
+            gap: 0.4em
+            font-weight: 700
+            align-items: center
+            justify-content: center
+            background: variables.$primary-color
+            padding: 1em
+            border-radius: 50%
+            flex-direction: column
+
+            @include medias-base.tabletResponsive
+                width: 80px
+                font-size: 1em
+                height: 80px
+
+            @include medias-base.mobileResponsive
+                width: 60px
+                font-size: 0.7em
+                height: 60px
+
+    .promotion-counter
+        display: flex
+        gap: 1.5em
+        color: variables.$bg-color
+        font-size: 1.2em
+        font-weight: 800
+        align-items: center
+        flex-direction: column
+        justify-content: center
+
+        @include medias-base.tabletResponsive
+            color: variables.$dark-color
+
+
+

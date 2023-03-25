@@ -1,0 +1,98 @@
+@use '../1-Base/variables'
+
+%item-style
+     display: flex
+     gap: 0.5em
+
+
+
+@mixin inputConfig
+    display: flex
+    border-radius: 50px 50px
+    justify-content: space-between
+    width: 30%
+    background: #fff
+
+@mixin input
+    height: 40px
+    border-top-left-radius: 20px
+    border-bottom-left-radius: 20px
+    padding-left: 25px
+
+@mixin button
+    padding: 1em
+    background: variables.$primary-color
+    color: #fff
+    font-weight: 700
+    border-top-right-radius: 20px
+    border-bottom-right-radius: 20px
+
+@mixin cartComponent
+    text-align: center
+    display: flex
+    gap: 2.5em
+    justify-content: center
+    align-items: center
+
+@mixin navbar($colorOne , $colorTwo , $pd)
+    display: flex
+    align-items: center
+    padding: $pd
+    background: $colorOne
+    color: $colorTwo
+    justify-content: space-between
+
+@mixin banners
+    position: absolute
+    padding: 1em
+    display: flex
+    gap: 2em
+    font-size: 1.5em
+    justify-content: center
+    flex-direction: column
+    top: 0
+    left: 0
+    bottom: 0
+    font-weight: 800
+    border-bottom-right-radius: 50px
+    background: variables.$color-opacity
+    align-self: flex-start
+    color: variables.$light-color
+    box-shadow: 0.1em 0.1em 0.2em variables.$primary-color
+    cursor: pointer
+
+@mixin cardImage
+    width: 30%
+    height: 300px
+    background-position: center center
+    padding: 5em
+    background-size: 100%
+    position: relative
+
+
+@mixin product
+    border-radius: 0.2em
+    display: flex
+    height: 600px
+    padding: 1.5em
+    align-items: center
+    justify-content: space-around
+    flex-direction: column
+    border: 1px solid variables.$bg-color
+    position: relative
+    cursor: pointer
+
+@mixin promotionSection
+    display: flex
+    flex-direction: column
+    gap: 2em
+    justify-content: center
+    align-items: center
+    height: 80vh
+    background-repeat: no-repeat
+    background-position-x: 95%
+    background-position-y: 4em
+    background-size: 25%
+    padding: 2em
+    color: variables.$light-color
+    background-color: variables.$section-bg-color

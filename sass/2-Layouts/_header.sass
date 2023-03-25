@@ -1,0 +1,161 @@
+@use '../1-Base/variables'
+@use '../1-Base/medias-base'
+@use 'mixins-layouts'
+
+
+.header
+    display: flex
+    flex-direction: column
+
+
+
+.init-header
+    @include mixins-layouts.navbar(variables.$secondary-bg-color , variables.$light-color , 1em)
+
+    @include medias-base.tabletResponsive
+      font-size: 0.8em
+      gap: 2em
+      flex-wrap: wrap
+      justify-content: center
+      align-items: center
+
+
+    &-list
+        margin-left: 50px
+        display: flex
+        gap: 2em
+        align-items: center
+
+        @include medias-base.tabletResponsive
+            margin-left: 0px
+
+        .item
+            @extend %item-style
+
+            i
+                color: variables.$primary-color
+
+    &-list-two
+        margin-right: 50px
+        display: flex
+        gap: 2em
+        align-items: center
+
+        .item
+            @extend %item-style
+
+            i
+                color: variables.$primary-color
+
+
+.principal-header
+    @include mixins-layouts.navbar(variables.$bg-color , variables.$light-color , 2em)
+
+    @include medias-base.tabletResponsive
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 2em
+        flex-direction: column
+        margin-left: 0
+
+    &-title
+        font-size: 3em
+        font-weight: 800
+
+        i
+            color: variables.$primary-color
+
+    &-input
+        @include mixins-layouts.inputConfig
+
+        @include medias-base.tabletResponsive
+            width: 80%
+
+
+        &-iptn
+            @include mixins-layouts.input
+
+        &-button
+            @include mixins-layouts.button
+      
+    &-cart
+        @include mixins-layouts.cartComponent
+
+
+
+        .icon
+            position: relative
+            cursor: pointer
+
+
+            .quantity
+                position: absolute
+                top: -25%
+                right: 10%
+                text-align: center
+                padding: 0.1em
+                background: variables.$primary-color
+                border-radius: 50%
+
+            i
+                color: variables.$primary-color
+
+                  
+                &:hover
+                    transition: 0.1s all ease-in
+                    color: variables.$light-color
+
+.last-header
+    display: flex
+    justify-content: flex-start
+    padding: 0.4em
+    border-bottom: 1px solid variables.$gray-text-color
+
+    @include medias-base.tabletResponsive
+        border-bottom: none
+        flex-direction: column
+
+    &-list
+        margin-left: 10px
+        display: flex
+        padding: 1em
+        cursor: pointer
+        color: variables.$link-color
+        gap: 3em
+
+        @include medias-base.tabletResponsive
+            margin: 0 0
+            display: none
+            z-index: 3
+            position: absolute
+            top: 0%
+            border-radius: 0.5em
+            box-shadow: 0.1em 0.1em 0.2em #000
+            width: 80%
+            padding: 1em
+            background: variables.$light-color
+            align-items: center
+            flex-direction: column
+
+        .item-header-end
+            &:hover
+                color: variables.$gray-text-color
+
+
+.mobile-header
+    display: none
+    cursor: pointer
+
+    @include medias-base.tabletResponsive
+        display: block
+        margin-top: 0.5em
+        font-size: 3em
+        text-align: center
+
+        &:hover
+            color: variables.$primary-color
+
+
+
+    
