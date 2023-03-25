@@ -12,8 +12,6 @@
 <ul>
 
 
-<hr>
-
 <h2> Projeto : </h2>
 
 <img src="/images/Screenshot_1.png"/>
