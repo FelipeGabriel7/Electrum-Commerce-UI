@@ -273,7 +273,7 @@ input {
   }
 }
 .cards-header .card-1 {
-  background-image: url("/images/banner-1.jpg");
+  background-image: url("./images/banner-1.jpg");
   width: 30%;
   height: 300px;
   background-position: center center;
@@ -315,7 +315,7 @@ input {
   background: #f5062d;
 }
 .cards-header .card-2 {
-  background-image: url("/images/banner-2.jpg");
+  background-image: url("./images/banner-2.jpg");
   width: 30%;
   height: 300px;
   background-position: center center;
@@ -357,7 +357,7 @@ input {
   background: #f5062d;
 }
 .cards-header .card-3 {
-  background-image: url("/images/banner-3.jpg");
+  background-image: url("./images/banner-3.jpg");
   width: 30%;
   height: 300px;
   background-position: center center;
@@ -482,7 +482,7 @@ input {
 }
 
 .section-promotion {
-  background-image: url("/images/deal_headset.png");
+  background-image: url("./images/deal_headset.png");
   display: flex;
   flex-direction: column;
   gap: 2em;
