@@ -21,6 +21,8 @@
         
         .counter-item
             display: flex
+            text-align: center
+            flex-direction: column
             width: 120px
             height: 120px
             gap: 0.4em
@@ -31,6 +33,11 @@
             padding: 1em
             border-radius: 50%
             flex-direction: column
+
+            &:nth-child(1)
+                width: 120px
+                padding: 1em
+                
 
             @include medias-base.tabletResponsive
                 width: 80px
